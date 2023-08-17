@@ -43,7 +43,6 @@ body{
     width: 100%;
 }
 
-
 .main{
     position: relative;
     max-width: 830px ;
@@ -71,7 +70,6 @@ i .arrrow{
     max-width: 10rem;
     content: url('./images/logo.svg');
 }
-
 
 h1{
     width: 100%;
