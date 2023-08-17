@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+* {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+:root{
+    --desaturated-red: hsl(0, 36%, 70%);
+    --soft-red: hsl(0, 93%, 68%);
+    --dark-red: hsl(0, 6%, 24%);
+}
+
+body{
+    min-height: 100vh;
+    background: var(--desaturated-red);
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background: white;
+    max-width: 1440px;
+    height: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    display: flex;
+    flex-flow: row;
+}
+
+.wrapper{
+    background: hsla(0, 36%, 70%, 10%);
+    width: 100%;
+    position: relative;    
+}
+
+.bg-img{
+    opacity: 75%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+.main{
+    position: relative;
+    max-width: 830px ;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.content{
+    max-width: 20rem;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+i .arrrow{
+    color: white;
+    content: url('./images/icon-arrow.svg');
+}
+
+.logo-desktop{
+    margin: 2rem 0 8rem;
+    max-width: 10rem;
+    content: url('./images/logo.svg');
+}
+
+
+h1{
+    width: 100%;
+    margin: 0;
+    font-size: 4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: var(--desaturated-red);
+    letter-spacing: 1rem;
+}
+
+h1 b{
+    font-weight: 600;
+    color: var(--dark-red);
+}
+
+p{
+    color: var(--desaturated-red);
+    line-height: 2rem;
+    font-size: 16px;
+    margin-bottom: 4rem;
+}
+
+.img-container{
+    background-size: cover;
+    background-image: url('./images/hero-desktop.jpg');
+    aspect-ratio:  61/80;
+
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1px 0;
+    height: 3rem;
+    border-radius: 5rem;
+    border: solid var(--desaturated-red) 1px
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+input, button{
+    border: none;
+    height: 3rem;
+    border-radius: 5rem;
+}
+
+button{
+    height: 3.05rem;
+    scale: 1.11;
+    cursor: pointer;
+}
+
+input{
+    font-size: 16px;
+    flex-grow: 2;
+    width: 100%;
+    padding-left: 2rem;
+}
+
+input:focus{
+    outline: none;
+}
+
+form:focus-within{
+    outline: 1px solid var(--desaturated-red);
+}
+
+input::placeholder{
+    font-size: 14px;
+    color: var(--desaturated-red);
+}
+
+button{
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    width: 25%;
+}
+
+button:hover{
+    transform: scale(1.05);
+    box-shadow: black;
+    transition: 0.5s ease;
+}
+
+.email.error:focus, .email.error{
+    outline: solid var(--soft-red) 1px;
+}
+
+.error-text{
+    display: none;
+    color: var(--soft-red);
+}
+
+.email.claimed, .emai.error{
+    border: solid green 1px;
+}
+
+.img-mobile{
+    display: none;
+}
+
+@media only screen and (max-width: 900px) {
+    body{
+        background: hsla(0, 36%, 70%, 10%);
+        height: auto;
+    }
+
+    .container{
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    .main{
+        align-items: center;
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .img-container, .bg-img{
+        display: none;
+    }
+
+    .content{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .wrapper{
+        height: 100%;
+    }
+    .logo-desktop{
+        display: none;
+    }
+
+    .logo-mobile{
+        content: url('./images/logo.svg');
+        margin: 2rem 0 2rem 2rem;
+    }
+
+    .img-mobile{
+        width: 100%;
+        display: flex;
+    }
+
+    h1{
+        text-align: center;
+        font-size: 3rem;
+    }
+}
